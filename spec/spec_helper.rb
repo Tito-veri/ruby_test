@@ -54,4 +54,9 @@ Capybara.configure do |config|
   config.app_host = 'https://hotel.testplanisphere.dev'
 end
 
+def take_save_screenshot(scenario)
+  today = Date.today.strftime('%Y-%m-%d')
+  page.save_screenshot "SaveScreenShot/#{today}_#{scenario}.png", full: true
+end
+
 require 'pages/app'

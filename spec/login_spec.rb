@@ -13,7 +13,7 @@ feature 'ログイン' do
     expect(app.my_page.header).to have_text('マイページ')
     expect(app.my_page.username).to have_text('山田一郎')
 
-    page.save_screenshot 'SaveScreenShot/yamada.png', full: true
+    take_save_screenshot 'yamada'
   end
 
   scenario '定義済みユーザ（松本さくら）でログインができること' do
@@ -26,7 +26,7 @@ feature 'ログイン' do
     expect(app.my_page.header).to have_text('マイページ')
     expect(app.my_page.username).to have_text('松本さくら')
 
-    page.save_screenshot 'SaveScreenShot/matsumoto.png', full: true
+    take_save_screenshot 'matsumoto'
   end
 
 end
