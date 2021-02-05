@@ -28,5 +28,4 @@ feature 'ログイン' do
 
     take_save_screenshot 'matsumoto'
   end
-
 end
